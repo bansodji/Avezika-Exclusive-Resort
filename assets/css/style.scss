@@ -1,0 +1,134 @@
+*{
+    font-family: 'Karla', sans-serif;
+}
+
+@import "_mycss";
+
+body{
+    background: #f8f8f8;
+}
+
+.active{
+    color: #fff;
+}
+
+nav{z-index: 100;}
+
+.hover-fff:hover{
+    color: #fff;
+}
+
+#mobile-navbar{display: none;}
+
+.hero{
+    width: 100%;
+    height: 150vh;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+                url("../img/hero.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.after-header:hover > .after-header-bo{
+    background: rgba(0,0,0,0.7);
+}
+
+.top-bottom-wraper{
+    .top{
+        background: #fff;
+        box-shadow: 0 0 8px 2px rgba(0,0,0,0.1);
+    }
+
+    &:hover > .top{
+        background: $theme-3;
+        transition: 100ms;
+
+        h2{
+            color: $theme-1;
+            transition: 100ms;
+        }
+
+        span{
+            color: $theme-1;
+            transition: 100ms;
+        }
+    }
+}
+
+.our-rooms{
+    .room-details{
+        transition: 100ms;
+        cursor: pointer;
+        &:hover{
+            background: $theme-1;
+            .fas{color: #fff;}
+            h1{color: #fff;}
+            button{border: none;}
+        }
+    }
+}
+
+.testmonial{
+    .testmonial-quote{
+        background: #fff;
+        border-radius: 10px;
+
+        .f-quote{
+            padding: 10px;
+            color: #fff;
+            background: $theme-1;
+            border-radius: 50%;
+            position: absolute;
+            left: 100%;
+            top: 100%;
+            transform: translate(-100%, -100%);
+        }
+    }
+}
+
+.gallery{
+    .insta-img{
+        .box-overlay{display: none !important;}
+
+        &:hover > .box-overlay{
+            display: flex !important;
+            cursor: zoom-in;
+            .fab{cursor: zoom-in;}
+        }
+    }
+}
+
+footer{
+    .subscribe-box{
+        border: 1px solid #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+
+        input{
+            background: none;
+            border: none;
+            outline: none;
+            color: #fff;
+            padding: 0;
+            width: 250px;
+        }
+        
+        i{
+            color: #fff;
+        }
+    }
+}
+
+
+@media (max-width: 992px){
+    #navbar{display: none;}
+    #mobile-navbar{display: block;}
+}
+
+@media (max-width:770px){
+    .hero{height: 130vh;}
+}
